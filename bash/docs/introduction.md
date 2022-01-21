@@ -70,8 +70,8 @@ ls -l $output
 ```
 We actually introduced some new things here. If you have any minor experience with programming, you should know that programming languages allow to add comments, i.e. lines ignored by the interpreter when the script is executed. Different languages have different characters to tell the interpreter that a line is a comment line, and bash uses the `#` symbol. <br><br>
 The `tar` command, together with the `-czf` option, creates the backup archive. One can look at the [tar manual page](https://www.commandlinux.com/man-page/man1/tar.1.html) to see all the possible options, but here `-czf` stands for **c**reate, filter archive through gzip, **f**ilename; the first argument it takes is the filename of the archive we  want to create, and it is therefore the content of our `output` variable; the last needed argument is ”where to get the files to store in the archive”, and that is told by `input`. Finally, the `ls` command outputs a list of the content in a specific directory, and the `-l` option (*long*) just tells the command to show more information than it would by just calling `ls $output`. <br><br>
-There’s actually one thing that you might have missed. From the [bash manual](https://devhints.io/bash) : ”The `$` character introduces parameter expansion, command substitution, or arithmetic expansion. The parameter name or symbol to be expanded may be enclosed in braces, which are optional but serve to protect the variable to be
-expanded from characters immediately following it which could be interpreted as part of the name.”. In simple words, braces are put there just because something immediately follows the variable name, but we need a way to tell bash where the variable name ends. In other cases we can just insert a white space by pressing the space bar, but here that’s not an option because it would ”break” the path for the creation of our backup archive.
+There’s actually one thing that you might have missed. From the [bash manual](https://devhints.io/bash) : *”The `$` character introduces parameter expansion, command substitution, or arithmetic expansion. The parameter name or symbol to be expanded may be enclosed in braces, which are optional but serve to protect the variable to be
+expanded from characters immediately following it which could be interpreted as part of the name.”*. In simple words, braces are put there just because something immediately follows the variable name, but we need a way to tell bash where the variable name ends. In other cases we can just insert a white space by pressing the space bar, but here that’s not an option because it would ”break” the path for the creation of our backup archive.
 
 ## Output and error redirections
 Normally commands executed on GNU/Linux command line either produce output, require input or throw an error message. Every time you execute a command, three possible outcomes might happen. The first scenario is that the command will produce an expected output; in the second case, the command will generate an error; lastly,
@@ -133,5 +133,3 @@ cat stdoutandstderr.txt
 > `foobar`
 
 As you may have inferred, the `cat` command prints out the content of a target file. 
-
-## Functions
