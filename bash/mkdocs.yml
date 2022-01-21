@@ -1,0 +1,5 @@
+site_name: Bash programming handbook
+nav:
+    - Home: index.md
+    - Introduction: introduction.md
+theme: readthedocs
