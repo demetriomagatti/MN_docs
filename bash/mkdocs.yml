@@ -2,4 +2,5 @@ site_name: Bash programming handbook
 nav:
     - Home: index.md
     - Introduction: introduction.md
+    - External sources: useful_links.md
 theme: readthedocs
