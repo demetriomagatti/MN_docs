@@ -133,3 +133,23 @@ cat stdoutandstderr.txt
 > `foobar`
 
 As you may have inferred, the `cat` command prints out the content of a target file. 
+
+## Functions
+I will again assume I am not talking to somebody who’s totally new to coding and therefore has an idea of what a function is and can be used for. I’ll just put here an example of a simple function definition and call in a veeeery brief script which we will call `function.sh`. Suppose the output of the `whoami` command is ”demetrio” and the output of the `HOME` command is ”demetrios_home” (please note the huge amount of imagination I used here).
+```bash
+!/bin/bash
+
+function user_details{
+    echo "User name: $(whoami)"
+    echo "Home directory: $HOME"
+}
+
+user_details
+```
+The function we defined is called `user_details` and the definition process is actually quite simple. You just type function followed by the function name and embrace the commands list of the function between braces. The indentation is arbitrary and not necessary, but it is always helpful to understand where a function starts and ends. If you are familiar with functions (and maybe you’re into Python, just like me), you may notice the absence of the `return`. As we will see, there’s no need to introduce it. To call the function, you just type its name. Let’s execute the script in the shell:
+```bash
+chmod +x function.sh
+./function.sh
+```
+> `User name: demetrio` <br>
+> `Home directory: demetrios_home`

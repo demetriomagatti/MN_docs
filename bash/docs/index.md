@@ -4,10 +4,19 @@ This serves both as a startup project to get familiar with mkdocs and to create 
 
 ## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        introduction.md
-        useful_links.md
-        ...       # Other markdown pages, images and other files
-    
+Basically, I'll just go over some examples and explain how bash is interpreting and doing things. Here you have some tips that I hope can allow a better comprehension of the guide. 
+
+In-text variables, filenames, commands will be formatted as `command example`.
+
+Many-line codes chunk will be put together in a gray box, as following:
+
+```bash
+first code line
+second code line
+```
+
+Every now and then, we'll be interest in some command's output. They will still be enveloped in a box, but will also have an extra indentation block and will be red-colored:
+```bash
+this is a command
+```
+> `and this is its output`
