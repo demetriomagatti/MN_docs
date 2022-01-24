@@ -153,6 +153,7 @@ chmod +x function.sh
 ```
 > `User name: demetrio` <br>
 > `Home directory: demetrios_home`
+
 Let us introduce another function, actually not to add any knowledge on functions themselves but to introduce a couple of new commands and the first "live input".
 ```bash
 function total_files{
@@ -180,4 +181,5 @@ We just assigned the values 1 and to 2 to variables `a` and `b`< respectively. W
 | not equal      | -ne      | != |
 | less or equal      | -le      | <  |
 | greater or equal      | -ge      | <  |
+
 No problem regarding numeric values comparison and in string equal/not equal to another string case, but you may actually wonder what does it mean that a string is greater than another. The "greater than" operator returns `TRUE` *if the left operand is greater than the right sorted by alphabetical order*, i.e. if the second string comes after the other once they have been sorted in alphabetical order.
