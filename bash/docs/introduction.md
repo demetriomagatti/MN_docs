@@ -153,3 +153,33 @@ chmod +x function.sh
 ```
 > `User name: demetrio` <br>
 > `Home directory: demetrios_home`
+
+Let us introduce another function, actually not to add any knowledge on functions themselves but to introduce a couple of new commands and the first "live input".
+```bash
+function total_files{
+    find $1 -type f | wc -l    
+    }
+```
+Such short function returns the number of files located in a directory. Again, no `return` is needed. The `find` command, as you may have innferred, is the command that seaarches for files in the directory. "Which directory?", you ask? That's what the `$1` is there for. Once the function is called, it awaits for an argument to be passed to it manually, and that argument is (in this case) the directory to be explored. After that, the `-type f` option tells bash *what to look for* in the directory (**f** for **f**iles). The vertical bar `|` is commonly referred to as **pipe**, and it is used to pipe one command into another. That is, it directs the output from the first command into the input of the second command. Such second command is `wc`, which stands for **w**ord **c**ount. together with the `-l` option, it returns the total number of files. A bit more is to come here when I get to experiment on my linux laptop. 
+
+## Numeric and String Comparisons
+Using comparisons, we can compare strings (words, sentences) or numbers whether raw or as variables. As usual, let's see an example
+```bash
+a=1
+b=2
+[$a -lt $b]
+echo $
+```
+> `0`
+
+We just assigned the values 1 and to 2 to variables `a` and `b`< respectively. We then evaluate the logical expression `[$a -lt $b]`, where `lt` stands for **l**ess **t**hen, and run the `echo`  command; by just typing the plain `$` symbol not followed by a variable, bash retrievs re results of the last evaluaton, in this case the result of the logical expression. If it's not the first time you see logical expressions, the result `0` is likely to have left you pretty astonished. Unlike any other programming language I hav eseen so far (and they may not be many, but there's a few ones), in bash *0 stands for TRUE and 1 stands for FALSE*. A table listing the rudimentary comparison operators for both numbers and strings follows.
+| Description      | Numeric comparison |   String comparison  |
+| ----------- | ----------- | ----------- |
+| less than      | -lt      | <  |
+| greater than      | -gt      | >  |
+| equal      | -eq      | ==  |
+| not equal      | -ne      | != |
+| less or equal      | -le      |   |
+| greater or equal      | -ge      |   |
+
+No problem regarding numeric values comparison and in string equal/not equal to another string case, but you may actually wonder what does it mean that a string is greater than another. The "greater than" operator returns `TRUE` *if the left operand is greater than the right sorted by alphabetical order*, i.e. if the second string comes after the other once they have been sorted in alphabetical order.
