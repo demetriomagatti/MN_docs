@@ -1,6 +1,6 @@
 # parametri.r
 
-| Soources | Sourced by |
+| Sources | Sourced by |
 | -------- | ---------- |
 |          | elaboraDati.r |
 

@@ -5,5 +5,6 @@ nav:
     - parametri overview: parametri_ov.md
     - analisiM3 overview: analisiM3_ov.md
     - loadDataTools overview: loadDataTools_ov.md
+    - tools overview: tools_ov.md
     - External sources: useful_links.md
 theme: readthedocs  

@@ -2,7 +2,7 @@
 
 ## elaboraDati.r
 
-| Soources | Sourced by |
+| Sources | Sourced by |
 | -------- | ---------- |
 | parametri.r | |
 | analisiM3.r | |
@@ -13,12 +13,27 @@
 
 ## parametri.r
 
-| Soources | Sourced by |
+| Sources | Sourced by |
 | -------- | ---------- |
 |          | elaboraDati.r |
 
 ## analisiM3.r 
 
-| Soources | Sourced by |
+| Sources | Sourced by |
 | -------- | ---------- |
 | parametri.r | |
+
+## loadDataTools.r
+
+| Sources | Sourced by |
+| -------- | ---------- |
+| hostconf.r                | analisiM3.r |
+| tools.r                   |               |
+| connectionTools.r         |               |
+
+## tools.r
+
+| Sources | Sourced by |
+| -------- | ---------- |
+|          | analisiM3.r       |
+|          | loadDataTools.r   |

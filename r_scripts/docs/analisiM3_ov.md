@@ -1,6 +1,6 @@
 # analisiM3.r
 
-| Soources | Sourced by |
+| Sources | Sourced by |
 | -------- | ---------- |
 | tools.r                   | elaboraDati.r |
 | loadDataTools.r           |               |
@@ -33,6 +33,7 @@ abios<-renameCol(abios, c("IDRICOVERO.x", "centreCode.x","ID.x", "DATAINIZIO.x",
 The code chunk appears some times in the .r file. What it does is to merge two dataframes by one column and remove the duplicates from the merged dataframe. It's a bit messy because it requires to know the column which are duplicated and to manually insert their name. A bit cleaner version would be something like:
 
 ```R
+library(stringr)
 library(data.table)
 
 clean_merge <- function(df_x, df_y, by_x, by_y){
@@ -47,13 +48,13 @@ In order to do a clean merge you now just need one code line, and the function n
 ```R
 mt_split1 <- mtcars[c('mpg','cyl','disp')]
 mt_split2 <- mtcars[c('mpg','cyl','drat')]
-mt_split1$car_id = 1:dim(mt_split1)[1]
-mt_split2$id_car = 1:dim(mt_split2)[1]
+mt_split1$car_id = 1:nrow(mt_split1)
+mt_split2$id_car = 1:nrow(mt_split2)
 
 merged <- clean_merge(mt_split1, mt_split2, 'car_id', 'id_car')
 ```
 <b>Occurencies</b>: lines (52-57, 71-77, 118-123, 178-184) <br><br>
 
-<li> More to come: a lot of functions are source from other files and I need to do what they do.
+<li> More to come: a lot of functions are sourced from other files and I need to do what they do.
 
 </ul>
