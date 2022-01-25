@@ -1,0 +1,9 @@
+site_name: M3/ProSafe analysis scripts
+nav:
+    - Home: index.md
+    - Introduction: introduction.md
+    - parametri overview: parametri_ov.md
+    - analisiM3 overview: analisiM3_ov.md
+    - loadDataTools overview: loadDataTools_ov.md
+    - External sources: useful_links.md
+theme: readthedocs  
